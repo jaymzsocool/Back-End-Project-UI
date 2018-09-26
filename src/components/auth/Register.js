@@ -19,7 +19,7 @@ class Register extends Component {
             .post('https://bepro.herokuapp.com/api/register', this.state)
             .then(res => {
                 localStorage.setItem('jwt', res.data.token);
-                this.props.history.push('/note')
+                window.location.href = "/note";
             })
             .catch(err => {
                 console.log(err);
