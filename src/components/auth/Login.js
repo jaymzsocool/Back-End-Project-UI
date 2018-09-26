@@ -17,7 +17,7 @@ class Login extends Component {
         e.preventDefault()
 
         axios
-            .post('http://localhost:5000/api/login', this.state)
+            .post('https://bepro.herokuapp.com/api/login', this.state)
             .then(res => {
                 localStorage.setItem('jwt', res.data.token);
                 window.location.href = "/note";

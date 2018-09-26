@@ -16,7 +16,7 @@ class Register extends Component {
         e.preventDefault()
 
         axios
-            .post('http://localhost:5000/api/register', this.state)
+            .post('https://bepro.herokuapp.com/api/register', this.state)
             .then(res => {
                 localStorage.setItem('jwt', res.data.token);
                 this.props.history.push('/note')

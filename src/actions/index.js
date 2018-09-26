@@ -18,7 +18,7 @@ export const fetchNotes = () => {
             Authorization :token
         }
     }
-    const request = axios.get(`http://localhost:5000/api/notes`, reqOptions)
+    const request = axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
     return (dispatch) => {
         request.then(({data})=> {
             dispatch({type: FETCH_NOTE, payload: data})
@@ -39,7 +39,7 @@ export const addNote = note => {
             Authorization :token
         }
     }
-    const request = axios.post(`http://localhost:5000/api/notes`, note, reqOptions)
+    const request = axios.post(`https://bepro.herokuapp.com/api/notes`, note, reqOptions)
     return (dispatch) => {
         request.then(({data})=> {            
             dispatch({type: ADD_NOTE, payload: data})
@@ -65,7 +65,7 @@ export const editNote = (id, note) => {
             Authorization :token
         }
     }
-    const request = axios.put(`http://localhost:5000/api/notes/${id}`, note, reqOptions)
+    const request = axios.put(`https://bepro.herokuapp.com/api/notes/${id}`, note, reqOptions)
     return (dispatch) => {
         request.then(({data})=> {            
             dispatch({type: EDIT_NOTE, payload: data})
@@ -86,7 +86,7 @@ export const deleteNote = id => {
             Authorization :token
         }
     }
-    const request = axios.delete(`http://localhost:5000/api/notes/${id}`, reqOptions)
+    const request = axios.delete(`https://bepro.herokuapp.com/api/notes/${id}`, reqOptions)
     return (dispatch) => {
         request.then(({data})=> {console.log(data)
             dispatch({type: DELETING_NOTE, payload: data})
