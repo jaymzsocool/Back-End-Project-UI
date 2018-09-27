@@ -42,8 +42,8 @@ class Login extends Component {
                             <input name = 'password' value = {this.state.password} onChange = {this.handleChange} type="password"></input>
                         </div>
                         <div className="auth-form-btn">
-                            <button type = "submit">Sign In</button>
-                            <Link to = '/'><button>Back</button></Link>
+                            <button type = "submit"  type= "button">Sign In</button>
+                            <Link to = '/'><button  type= "button">Back</button></Link>
                         </div>
                     </form>
                 </div>

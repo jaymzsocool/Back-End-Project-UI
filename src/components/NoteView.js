@@ -30,7 +30,7 @@ class NoteView extends Component {
                         <p>Are you sure you want to delete this?</p>
                         <div className="modal-btns">                            
                             <button className="delete-btn" onClick = {this.handleDelete} type= "button">Delete</button>                                                       
-                            <button onClick={this.toggleModal}>No</button>
+                            <button onClick={this.toggleModal} type= "button">No</button>
                         </div>
                     </div>
                 </div>
