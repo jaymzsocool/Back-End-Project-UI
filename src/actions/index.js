@@ -86,9 +86,10 @@ export const deleteNote = id => {
             Authorization: token
         }
     }
-    const request = axios.delete(`https://bepro.herokuapp.com/api/notes/${id}`, reqOptions)
+    
     return (dispatch) => {
-        request.then(({data})=> {console.log(data)
+        axios.delete(`https://bepro.herokuapp.com/api/notes/${id}`, reqOptions)
+        .then(({data})=> {console.log(data)
             dispatch({type: DELETING_NOTE, payload: data})
         })
         .then(()=>{
