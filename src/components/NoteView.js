@@ -17,8 +17,7 @@ class NoteView extends Component {
 
     handleDelete = e =>{    
         e.preventDefault()    
-        this.props.deleteNote(this.props.match.params.id);
-        this.props.fetchNotes()
+        this.props.deleteNote(this.props.match.params.id);        
         this.props.history.push('/note');
     }
 
