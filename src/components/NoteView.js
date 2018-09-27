@@ -16,7 +16,7 @@ class NoteView extends Component {
     }
 
     handleDelete = () =>{        
-        this.props.deleteNote(this.props.id);
+        this.props.deleteNote(this.props.match.params.id);
         this.props.fetchNotes()
         window.location.href = "/note";
     }
@@ -29,7 +29,7 @@ class NoteView extends Component {
                     <div className="modal-content">                        
                         <p>Are you sure you want to delete this?</p>
                         <div className="modal-btns">                            
-                            <button className="delete-btn" onClick = {this.handleDelete} >Delete</button>                                                       
+                            <button className="delete-btn" onClick = {this.handleDelete} type= "button">Delete</button>                                                       
                             <button onClick={this.toggleModal}>No</button>
                         </div>
                     </div>
