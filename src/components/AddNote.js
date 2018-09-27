@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addNote } from '../actions'
+import { addNote, fetchNotes } from '../actions'
 import { connect } from 'react-redux';
 
 class AddNote extends Component {
@@ -21,6 +21,7 @@ class AddNote extends Component {
         this.props.addNote(note)
         this.setState({title: '', note: ''})
         this.props.history.push('/note');
+        this.props.fetchNotes()
     }
 
     render(){
@@ -41,4 +42,4 @@ const mapStatetoProps = (state) => {
     }
 }
 
-export default connect(mapStatetoProps, { addNote })(AddNote)
+export default connect(mapStatetoProps, { addNote, fetchNotes })(AddNote)
