@@ -21,12 +21,12 @@ class App extends Component {
           <Route exact path = '/register' render = {()=><Register />} />
           <Route exact path = '/login' render = {()=><Login />} />
           <Route path = '/note' render = {()=><Sidebar />} />
-        <Switch> 
+        {/* <Switch> 
           <Route exact path = '/note' render = {()=><NoteList />} />
           <Route exact path = '/note/view/:id' render = {()=><NoteView />} />
           <Route exact path = '/note/:id/edit' render = {()=><EditNote />} />
           <Route exact path = '/note/new' render = {()=><AddNote />} />
-        </Switch>
+        </Switch> */}
       </div>
     );
   }
