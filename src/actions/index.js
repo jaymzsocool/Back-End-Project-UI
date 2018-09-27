@@ -18,10 +18,9 @@ export const fetchNotes = () => {
             Authorization: token
         }
     }
-    
+    const request = axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
     return (dispatch) => {
-        axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
-        .then(({data})=> {
+        request.then(({data})=> {
             dispatch({type: FETCH_NOTE, payload: data})
         })
         .then(()=>{

@@ -19,7 +19,7 @@ class AddNote extends Component {
             note: this.state.note
         }
         this.props.addNote(note)
-        this.setState({title: '', note: ''})
+        // this.setState({title: '', note: ''})
         this.props.history.push('/note');
     }
 
