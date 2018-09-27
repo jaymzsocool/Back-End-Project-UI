@@ -17,15 +17,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">       
-          <Route exact path = '/' render = {()=><Home />} />
-          <Route exact path = '/register' render = {()=><Register />} />
-          <Route exact path = '/login' render = {()=><Login />} />
-          <Route path = '/note' render = {()=><Sidebar />} />
+          <Route exact path = '/' render = {(props)=><Home {...props} />} />
+          <Route exact path = '/register' render = {(props)=><Register {...props} />} />
+          <Route exact path = '/login' render = {(props)=><Login {...props} />} />
+          <Route path = '/note' render = {(props)=><Sidebar {...props} />} />
         <Switch> 
-          <Route exact path = '/note' render = {()=><NoteList />} />
-          <Route exact path = '/note/view/:id' render = {()=><NoteView />} />
-          <Route exact path = '/note/:id/edit' render = {()=><EditNote />} />
-          <Route exact path = '/note/new' render = {()=><AddNote />} />
+          <Route exact path = '/note' render = {(props)=><NoteList {...props} />} />
+          <Route exact path = '/note/view/:id' render = {(props)=><NoteView {...props} />} />
+          <Route exact path = '/note/:id/edit' render = {(props)=><EditNote {...props} />} />
+          <Route exact path = '/note/new' render = {(props)=><AddNote {...props} />} />
         </Switch>
       </div>
     );
