@@ -18,10 +18,9 @@ export const fetchNotes = () => {
             Authorization: token
         }
     }
-    
+    const request = axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
     return (dispatch) => {
-        axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
-        .then(({data})=> {
+        request.then(({data})=> {
             dispatch({type: FETCH_NOTE, payload: data})
         })
         .then(()=>{
@@ -40,10 +39,9 @@ export const addNote = note => {
             Authorization: token
         }
     }
-    
+    const request = axios.post(`https://bepro.herokuapp.com/api/notes`, note, reqOptions)
     return (dispatch) => {
-        axios.post(`https://bepro.herokuapp.com/api/notes`, note, reqOptions)
-        .then(({data})=> {            
+        request.then(({data})=> {            
             dispatch({type: ADD_NOTE, payload: data})
         })
         .then(()=>{
@@ -69,8 +67,7 @@ export const editNote = (id, note) => {
     }
  
     return (dispatch) => {
-        axios.put(`https://bepro.herokuapp.com/api/notes/${id}`, note, reqOptions)
-        .then(({data})=> {            
+        axios.put(`https://bepro.herokuapp.com/api/notes/${id}`, note, reqOptions).then(({data})=> {            
             dispatch({type: EDIT_NOTE, payload: data})
         })
         .then(()=>{
