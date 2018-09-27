@@ -33,8 +33,7 @@ export const noteReducer = (state = initialState, action) =>{
             return(                
                 {
                     ...state,
-                    addingNote: true,
-                    notes: state.notes.concat(action.payload)
+                    addingNote: true
                 }
             )
         case ADDED_NOTE:
@@ -49,13 +48,7 @@ export const noteReducer = (state = initialState, action) =>{
             return(                
                 {
                     ...state,
-                    editingNote: true,
-                    notes: state.notes.map(note=>
-                        (note.id === state.selectedId)
-                        ?action.payload
-                        :note
-                    ) 
-                    
+                    editingNote: true 
                 }
             )
         case EDITED_NOTE:

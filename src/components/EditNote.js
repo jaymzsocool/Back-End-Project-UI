@@ -18,8 +18,8 @@ class EditNote extends Component {
 
     handleEditNote = () =>{
         const note = {
-          title: this.state.title,
-          note: this.state.note
+            title: this.state.title,
+            note: this.state.note
         };
         this.props.editNote(this.props.id, note);
         this.setState({title: '', note: ''});
