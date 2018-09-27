@@ -15,7 +15,7 @@ export const fetchNotes = () => {
     const token = localStorage.getItem('jwt');
     const reqOptions = {
         headers : {
-            Authorization :token
+            Authorization: token
         }
     }
     const request = axios.get(`https://bepro.herokuapp.com/api/notes`, reqOptions)
@@ -36,7 +36,7 @@ export const addNote = note => {
     const token = localStorage.getItem('jwt');
     const reqOptions = {
         headers : {
-            Authorization :token
+            Authorization: token
         }
     }
     const request = axios.post(`https://bepro.herokuapp.com/api/notes`, note, reqOptions)
@@ -62,7 +62,7 @@ export const editNote = (id, note) => {
     const token = localStorage.getItem('jwt');
     const reqOptions = {
         headers : {
-            Authorization :token
+            Authorization: token
         }
     }
     const request = axios.put(`https://bepro.herokuapp.com/api/notes/${id}`, note, reqOptions)
@@ -83,7 +83,7 @@ export const deleteNote = id => {
     const token = localStorage.getItem('jwt');
     const reqOptions = {
         headers : {
-            Authorization :token
+            Authorization: token
         }
     }
     const request = axios.delete(`https://bepro.herokuapp.com/api/notes/${id}`, reqOptions)
