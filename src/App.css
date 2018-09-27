@@ -87,7 +87,9 @@ body {
   outline: 0;
   cursor: default
 }
-
+.home-links button{
+  margin: 0;
+}
 .auth-bkgrd{
   background-color: rgb(196, 196, 196);
   width: 100%;
@@ -106,7 +108,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 50px 0 20px 0;
+  padding: 20px 0 20px 0;
   margin-bottom: 150px;
 }
 .auth-form-wrap h2{
@@ -130,7 +132,7 @@ body {
 
 .auth-form input{
   width:200px;
-  height: 25px;
+  height: 35px;
   border-radius: 5px;  
   font-size: 24px;
   margin-top: 5px;
@@ -146,6 +148,7 @@ body {
 
 .auth-form-btn button{
   width: 200px;  
+  margin: 0;
 }
 .auth-form-btn a:link, a:visited, a:hover, a:active{
   margin: 0;
