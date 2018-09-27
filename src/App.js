@@ -20,7 +20,7 @@ class App extends Component {
           <Route exact path = '/' render = {()=><Home />} />
           <Route exact path = '/register' render = {()=><Register />} />
           <Route exact path = '/login' render = {()=><Login />} />
-          {/* <Route path = '/note' render = {()=><Sidebar />} /> */}
+          <Route path = '/note' render = {()=><Sidebar />} />
         <Switch> 
           <Route exact path = '/note' render = {()=><NoteList />} />
           <Route exact path = '/note/view/:id' render = {()=><NoteView />} />
