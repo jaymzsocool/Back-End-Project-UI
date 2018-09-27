@@ -20,7 +20,7 @@ class Login extends Component {
             .post('https://bepro.herokuapp.com/api/login', this.state)
             .then(res => {
                 localStorage.setItem('jwt', res.data.token);
-                window.location.href = "/note";
+                this.props.history.push('/note');
             })
             .catch(err => {
                 console.log(err);
