@@ -41,7 +41,7 @@ class Register extends Component {
                             <input name = 'password' value = {this.state.password} onChange = {this.handleChange} type="password"></input>
                         </div>
                         <div className="auth-form-btn">
-                            <button type = "submit" type= "button">Register</button>
+                            <button type = "submit">Register</button>
                             <Link to = '/'><button type= "button">Back</button></Link>
                         </div>
                     </form>
